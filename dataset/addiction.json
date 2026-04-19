@@ -1,0 +1,149 @@
+{
+	"name": "addiction",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "FileServer1",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Excel",
+		"typeProperties": {
+			"sheetName": "tbPatientPrescriptions",
+			"location": {
+				"type": "FileServerLocation",
+				"fileName": "addiction.xls"
+			},
+			"firstRowAsHeader": true
+		},
+		"schema": [
+			{
+				"name": "PrescriptionID",
+				"type": "String"
+			},
+			{
+				"name": "PatientSystemID",
+				"type": "String"
+			},
+			{
+				"name": "ClinicID",
+				"type": "String"
+			},
+			{
+				"name": "UserSystemID",
+				"type": "String"
+			},
+			{
+				"name": "TimeStamp",
+				"type": "String"
+			},
+			{
+				"name": "DoctorsOrder",
+				"type": "String"
+			},
+			{
+				"name": "DAW",
+				"type": "String"
+			},
+			{
+				"name": "EffectiveDate",
+				"type": "String"
+			},
+			{
+				"name": "DrugName",
+				"type": "String"
+			},
+			{
+				"name": "DrugType",
+				"type": "String"
+			},
+			{
+				"name": "TotalDispense",
+				"type": "String"
+			},
+			{
+				"name": "TotalDispenseMeasure",
+				"type": "String"
+			},
+			{
+				"name": "Dosage",
+				"type": "String"
+			},
+			{
+				"name": "DosageMeasure",
+				"type": "String"
+			},
+			{
+				"name": "Sig",
+				"type": "String"
+			},
+			{
+				"name": "SigMeasure",
+				"type": "String"
+			},
+			{
+				"name": "SigTiming",
+				"type": "String"
+			},
+			{
+				"name": "DrugRemaining",
+				"type": "String"
+			},
+			{
+				"name": "DosePerDay",
+				"type": "String"
+			},
+			{
+				"name": "Instructions",
+				"type": "String"
+			},
+			{
+				"name": "Remarks",
+				"type": "String"
+			},
+			{
+				"name": "Closed",
+				"type": "String"
+			},
+			{
+				"name": "ClosedDate",
+				"type": "String"
+			},
+			{
+				"name": "NextMedicationDate",
+				"type": "String"
+			},
+			{
+				"name": "ExpirationDate",
+				"type": "String"
+			},
+			{
+				"name": "DoseBalance",
+				"type": "String"
+			},
+			{
+				"name": "OrderbyDoctor",
+				"type": "String"
+			},
+			{
+				"name": "Printed",
+				"type": "String"
+			},
+			{
+				"name": "PrescribedByOtherOrganization",
+				"type": "String"
+			},
+			{
+				"name": "PBOO_PrescribingDoctor",
+				"type": "String"
+			},
+			{
+				"name": "PBOO_Telephone",
+				"type": "String"
+			},
+			{
+				"name": "Refills",
+				"type": "String"
+			}
+		]
+	}
+}
