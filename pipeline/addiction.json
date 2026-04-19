@@ -16,13 +16,11 @@
 				"userProperties": [],
 				"typeProperties": {
 					"source": {
-						"type": "BinarySource",
+						"type": "ExcelSource",
 						"storeSettings": {
-							"type": "AzureBlobFSReadSettings",
-							"recursive": true
-						},
-						"formatSettings": {
-							"type": "BinaryReadSettings"
+							"type": "FileServerReadSettings",
+							"recursive": true,
+							"enablePartitionDiscovery": false
 						}
 					},
 					"sink": {
@@ -35,7 +33,7 @@
 				},
 				"inputs": [
 					{
-						"referenceName": "addiction_dst",
+						"referenceName": "addiction",
 						"type": "DatasetReference"
 					}
 				],
