@@ -1,0 +1,33 @@
+{
+	"$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"workspaceName": {
+			"value": "louissynapse"
+		},
+		"FileServer1_password": {
+			"value": ""
+		},
+		"HTL_BHL_Data_SFTP_password": {
+			"value": ""
+		},
+		"louissynapse-WorkspaceDefaultSqlServer_connectionString": {
+			"value": "Integrated Security=False;Encrypt=True;Connection Timeout=30;Data Source=tcp:louissynapse.sql.azuresynapse.net,1433;Initial Catalog=@{linkedService().DBName}"
+		},
+		"FileServer1_properties_typeProperties_host": {
+			"value": "\\\\DESKTOP-9QL2QIN\\datafiles"
+		},
+		"FileServer1_properties_typeProperties_userId": {
+			"value": "student"
+		},
+		"HTL_BHL_Data_SFTP_properties_typeProperties_host": {
+			"value": "appbhlsftp.blob.core.windows.net"
+		},
+		"HTL_BHL_Data_SFTP_properties_typeProperties_userName": {
+			"value": "appbhlsftp.princegeorgesftp"
+		},
+		"louissynapse-WorkspaceDefaultStorage_properties_typeProperties_url": {
+			"value": "https://louissynapsestorage.dfs.core.windows.net"
+		}
+	}
+}
