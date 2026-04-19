@@ -1,0 +1,17 @@
+{
+	"name": "Addiction2",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "FileServer1",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Binary",
+		"typeProperties": {
+			"location": {
+				"type": "FileServerLocation",
+				"fileName": "addiction.xls"
+			}
+		}
+	}
+}
