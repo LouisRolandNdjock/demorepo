@@ -67,7 +67,7 @@
 							"source": {
 								"type": "BinarySource",
 								"storeSettings": {
-									"type": "AzureBlobFSReadSettings",
+									"type": "FileServerReadSettings",
 									"recursive": true
 								},
 								"formatSettings": {
@@ -84,7 +84,7 @@
 						},
 						"inputs": [
 							{
-								"referenceName": "addiction_dst",
+								"referenceName": "Addiction2",
 								"type": "DatasetReference",
 								"parameters": {}
 							}
@@ -104,6 +104,7 @@
 				"annotations": []
 			},
 			"dependsOn": [
+				"[concat(variables('workspaceId'), '/datasets/Addiction2')]",
 				"[concat(variables('workspaceId'), '/datasets/addiction_dst')]"
 			]
 		},
@@ -441,6 +442,28 @@
 			},
 			"dependsOn": [],
 			"location": "westus2"
+		},
+		{
+			"name": "[concat(parameters('workspaceName'), '/Addiction2')]",
+			"type": "Microsoft.Synapse/workspaces/datasets",
+			"apiVersion": "2019-06-01-preview",
+			"properties": {
+				"linkedServiceName": {
+					"referenceName": "FileServer1",
+					"type": "LinkedServiceReference"
+				},
+				"annotations": [],
+				"type": "Binary",
+				"typeProperties": {
+					"location": {
+						"type": "FileServerLocation",
+						"fileName": "addiction.xls"
+					}
+				}
+			},
+			"dependsOn": [
+				"[concat(variables('workspaceId'), '/linkedServices/FileServer1')]"
+			]
 		}
 	]
 }
